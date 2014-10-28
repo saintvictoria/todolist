@@ -16,13 +16,17 @@
   <body>
 
     <div class="hero-unit">
-      <h1>'To Do List</h1>
-        <p><button id="btnNew">New Item</button></p>
-      <ul id="todolist">
-        <li><input type="checkbox"/><span>Do this thing</span></li>
+      <h1>Tasks</h1>
+
+      <input type="text" id="task-item" placeholder="enter tasks here...">
+      <button id="btnNew">Add</button>
+
+      <ul id="Task-List">
 
       </ul>
-      <p>Don't forget to update your readme file!!</p>
+      <script type="text/template" id="task_items">
+      <li><input type="checkbox"> <%= item %> </li>
+      </script>
     </div>
 
     <script src="scripts/vendor.js"></script>
