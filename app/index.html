@@ -24,17 +24,17 @@
   <body>
 
     <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
-        <li>Sass</li>
-        <li>Modernizr</li>
-        <li>Bourbon & Neat</li>
-        <li>UnderscoreJS</li>
+      <h1>Tasks</h1>
+
+      <input type="text" id="task-item" placeholder="enter tasks here...">
+      <button id="btnNew">Add</button>
+
+      <ul id="Task-List">
+
       </ul>
-      <p>Don't forget to update your readme file!!</p>
+      <script type="text/template" id="task_items">
+      <li><input type="checkbox"> <%= item %> </li>
+      </script>
     </div>
 
     <!-- build:js scripts/vendor.js -->
