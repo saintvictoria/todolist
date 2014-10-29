@@ -1,26 +1,139 @@
  // Bourbon & Neat
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
+@import url(http://weloveiconfonts.com/api/?family=entypo|fontawesome);
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+$taskfont:'Fira Sans', sans-serif;
+$headfont:'EB Garamond', serif;
+$typefont:'Special Elite', cursive;
+// 'Covered By Your Grace', cursive;
+// 'Signika', sans-serif;
 
 // Custom Styles
 body {
-  background: #fafafa;
+  background: #fafafa  ;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
+  //background-image: url("/images/backpack.jpeg");
+  background-color: black;
+}
+.body-container{
+  width: 100%;
+  height: 1000px;  position: relative;
+  background-image: url("/images/unnamed.png");
+  background-size: cover;
+  margin-top: -50px;
+}
+#console{
+  background-color: hsl(0,0,0);
+  height: 70px;
+  position: relative;
+
+}
+#task-item{
+  margin-top: 20px;
+  margin-left: 3%;
+  width: 60%;
+  border-radius: 3px;
+  padding-top: 9px;
+  font-family: $typefont;
+  font-size: 20px;
+  position: absolute;
+  border: none;
+}
+#btnNew, #deleteAll{
+  color: black;
+  margin-top: 17px;
+  border-radius: 3px;
+  width: 7%;
+  padding: 5px;
+  font-family: $typefont;
+  padding: 2px;
+  border: none;
+  margin-left: 65%;
+  position: absolute;
+  transition: background-color 0.2s ease;
+  &:hover{
+    background-color: hsl(0,0,92);
+  }
 }
 
+#deleteAll{
+  margin-left: 73%;
+}
 .hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
+  margin-left: 5%;
+  margin-top: 15px;
+  width: 90%;
+  position: absolute;
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
-  background-color: #eee;
+  color: black;
   border-radius: 6px;
   padding: 60px;
   h1 {
-    font-size: 60px;
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: -6px;
+    padding-top: 10px;
+    font-family: $typefont;
     line-height: 1;
+    color: #F4FAF8;
     letter-spacing: -1px;
   }
+  ul{
+    list-style-type: none;
+    margin-top: 3px;
+    width: 100%;
+  }
+  li{
+    color: black;
+    border-radius: 2px;
+    margin-left: -40px;
+    opacity: .8;
+    background-color: #F4FAF8;
+    border-bottom: 1px dashed hsla(212, 100%, 50%, 1);
+    font-family: $typefont;
+    text-align: justify;
+    position: relative;
+    transition: background-color 0.5s ease;
+  }
+  li:hover{
+    background-color: #A34618;
+  }
+.done {
+  text-decoration: line-through;
 }
+}
+.entypo-check{
+  font-size: 25px;
+  color: red;
+  position: absolute;
+  display: none;
+}
+.description{
+  width: 400px;
+}
+.entypo-cancel{
+  font-size: 25px;
+  text-align: right;
+  color: hsl(0,0,60);
+  display: none;
+  &:hover{
+    color: black;
+  }
+}
+
+/*.footer{
+  height: 80px;
+  width: 100%;
+  background-color: hsl(0,0,70);
+}*/
