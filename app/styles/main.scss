@@ -1,7 +1,7 @@
 // Bourbon & Neat
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
-@import url(http://weloveiconfonts.com/api/?family=entypo|fontawesome);
+
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
 }
@@ -25,10 +25,10 @@ body {
   background-color: black;
 }
 .body-container{
-  width: 80%;
+  width: 100%;
   height: 1000px;
   position: relative;
-  background-image: url("/images/unnamed.jpg");
+  background-image: url("/images/unnamed.png");
   background-size: cover;
   margin-top: -50px;
 }
@@ -141,7 +141,15 @@ body {
   font-family:$typefont;
   color: black;
 }
-
+.tally{
+  margin-left: 81%;
+  margin-top: 20px;
+  position: absolute;
+  line-height: 18px;
+  font-size: 13px;
+  font-family:$typefont;
+  color: black;
+}
 /*.footer{
   height: 80px;
   width: 100%;

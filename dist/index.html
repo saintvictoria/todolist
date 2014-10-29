@@ -4,31 +4,46 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>todolist</title>
+    <title>assignment14</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="styles/vendor.css">
 
+    <link href='http://fonts.googleapis.com/css?family=Fira+Sans|EB+Garamond|Oswald:400,700|Covered+By+Your+Grace|Si...' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+      @import url(http://weloveiconfonts.com/api/?family=entypo|fontawesome)
+    </style>
     <link rel="stylesheet" href="styles/main.css">
 
     <script src="scripts/vendor/modernizr.js"></script>
   </head>
   <body>
-
+<div class="body-container">
     <div class="hero-unit">
-      <h1>Tasks</h1>
-
-      <input type="text" id="task-item" placeholder="enter tasks here...">
-      <button id="btnNew">Add</button>
-
-      <ul id="Task-List">
+      <h1> Tasks. </h1>
+      <div id="console">
+        <input type="text" id="task-item" placeholder="enter task here...">
+        <button id="btnNew"><span class="entypo-list-add " title="Add New Item"> </span></button>
+        <button id="deleteAll" title="Clear List"><span class="fontawesome-trash"></span></button>
+        <div class="tally">
+          5 Done <br> 3 Incomplete
+        </div>
+      </div>
+      <ul id ="Task-List">
 
       </ul>
-      <script type="text/template" id="task_items">
-      <li><input type="checkbox"> <%= item %> </li>
-      </script>
-    </div>
+    </div><!--end of hero unit-->
+</div><!--end of body container-->
 
+<script type="text/template" id="task_items">
+<% if(status =='true') { %>
+    <li id ="<%=_id %>" class ="done"><%= item %></li>
+    <% } else { %>
+      <li id="<%=_id %>"><%= item %></li>
+    <% } %>
+
+</script>
     <script src="scripts/vendor.js"></script>
 
         <script src="scripts/main.js"></script>
