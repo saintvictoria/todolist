@@ -82,12 +82,12 @@ body {
   padding: 60px;
   h1 {
     font-size: 70px;
-    text-align: right;
+    text-align: center;
     margin-bottom: -6px;
     padding-top: 10px;
     font-family: $typefont;
     line-height: 1;
-    color: black;
+    color: white;
     letter-spacing: -1px;
   }
   ul{
@@ -100,7 +100,7 @@ body {
     border-radius: 2px;
     margin-left: -40px;
     opacity: .8;
-    background-color: hsla(52, 100%, 50%, 1);
+    background-color: #EFEDE0;
     border-bottom: 1px dashed hsla(212, 100%, 50%, 1);
     font-family: $typefont;
     text-align: justify;
@@ -108,7 +108,7 @@ body {
     transition: background-color 0.5s ease;
   }
   li:hover{
-    background-color: hsla(58, 97%, 58%, 1);
+    background-color: #A34618;
   }
   .done{
   text-decoration: line-through;
@@ -132,15 +132,7 @@ body {
     color: black;
   }
 }
-.tally{
-  margin-left: 81%;
-  margin-top: 10px;
-  position: absolute;
 
-  font-size: 13px;
-  font-family:$typefont;
-  color: black;
-}
 .tally{
   margin-left: 81%;
   margin-top: 20px;
