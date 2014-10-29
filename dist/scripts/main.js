@@ -11,6 +11,18 @@ var Task = function (options) {
   };
 };
 
+var count_section = function(){
+
+  $.getJSON(my_server).done(function (status_data){
+    var incomplete =_.where(status_data, {status: "false"});
+    var incomplete_total = incomplete.length;
+    var complete =_.where(status_data, {status: "true"});
+    var complete_total = complete.length;
+    //var incomplete = _.where(my_erver, {status : "false"});
+    $('.tally').html(''+incomplete_total + ' Incomplete' + '<br>' +complete_total +' Completed');
+
+  });
+};
 var task_list;
 var task_template =$('#task_items').html();
 var rendered = _.template(task_template);
@@ -42,10 +54,15 @@ var add_task = function(){
 
   $('#Task-List').append(rendered(data));
   $('#task-item').val('');
-  task_list.push(task);
-});
 
+});
+count_section();
 };
+
+$('#deleteAll').click( function(){
+
+  $('ul').empty();
+});
 
 
 $('#btnNew').on('click', function
@@ -81,4 +98,5 @@ $.ajax({
   url: my_server + "/" + checked._id,
   data: checked
 })
+count_section();
 });
